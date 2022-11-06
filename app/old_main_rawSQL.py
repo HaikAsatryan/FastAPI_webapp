@@ -1,6 +1,5 @@
 from fastapi import FastAPI, Response, status, HTTPException, Depends
-from pydantic import BaseModel
-from typing import Optional
+from .schemas import Post
 import psycopg2
 from psycopg2.extras import RealDictCursor
 from db_config import host, database, user, password
@@ -19,12 +18,6 @@ while True:
         print("Connecting to database failed")
         print("Error: ", error)
         time.sleep(5)
-
-
-class Post(BaseModel):
-    title: str
-    content: str
-    published: bool = True
 
 
 @app.get("/")

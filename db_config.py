@@ -5,4 +5,4 @@ database = 'fastapi'
 user = 'postgres'
 password = 'root'
 
-SQLALCHEMY_DATABASE_URL = f'postgresql://<<username>:<password>@<ip-address/hostname>/<database_name>'
+#SQLALCHEMY_DATABASE_URL = f'postgresql://<<username>:<password>@<ip-address/hostname>/<database_name>'
